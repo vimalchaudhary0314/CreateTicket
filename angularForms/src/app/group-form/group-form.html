@@ -1,0 +1,25 @@
+<h1>Form Group</h1>
+
+<ul>
+  <li>Name: {{ loginForm.value.name }}</li>
+  <li>Email: {{ loginForm.value.email }}</li>
+</ul>
+
+<form [formGroup]="loginForm" (ngSubmit)="handleProfile()">
+
+  <input type="text" formControlName="name" placeholder="Enter Name" />
+  @if(name?.hasError('required') && name?.touched){
+    <samp class="error">this name </samp>
+  }
+  <br><br>
+
+  <input type="email" formControlName="email" placeholder="Enter Email" />
+  <br><br>
+
+  <input type="password" formControlName="password" placeholder="Enter Password" />
+  <br><br>
+
+  <button type="submit">Login</button>
+  <button type="button" (click)="reset()">Reset</button>
+
+</form>

@@ -1,0 +1,5 @@
+<button (click)="getProductData()">Load Product Data</button>
+
+@for (item of productData; track item) {
+  <h2>{{item.name}} - {{item.brand}} - ₹{{item.price}}</h2>
+}

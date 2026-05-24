@@ -1,0 +1,67 @@
+<!-- 1. Interpolation -->
+<h1>Welcome to {{ title }}</h1>
+
+<h1>{{title | uppercase}}</h1>
+
+
+<!-- 2. Property Binding -->
+<button [disabled]="buttonStatus">Disabled via Property Binding</button>
+
+<!-- 3. Event Binding -->
+<button (click)="toggleLogin()">
+  {{ isLoggedIn ? 'Log Out' : 'Log In' }}
+</button>
+
+<!-- 4. Structural Directive: *ngIf -->
+<div *ngIf="isLoggedIn">
+  <p>You are viewing secret member content!</p>
+</div>
+
+<!-- 5. Structural Directive: *ngFor -->
+<h3>User List:</h3>
+<ul>
+  <li *ngFor="let name of users">{{ name }}</li>
+</ul>
+
+<!-- 6. Structural Directive: *ngSwitch -->
+<div [ngSwitch]="userRole">
+  <p *ngSwitchCase="'admin'">You have Full Access.</p>
+  <p *ngSwitchCase="'editor'">You have Edit Access.</p>
+  <p *ngSwitchDefault>You have Read-Only Access.</p>
+</div>
+
+<!-- 7. Two-Way Binding -->
+<input [(ngModel)]="currentUsername" placeholder="Enter username">
+<p>Live Preview: {{ currentUsername }}</p>
+
+<!-- 8. Template Reference Variable -->
+<input #phoneInput type="text" placeholder="Enter phone number">
+<button (click)="logValue(phoneInput.value)">Log Phone</button>
+
+<!-- 9. Attribute Directives -->
+<p [ngClass]="{'urgent-text': isUrgent}">This text uses ngClass</p>
+<p [ngStyle]="{'color': customColor, 'font-weight': 'bold'}">This text uses ngStyle</p>
+
+
+
+<!-- Service Data -->
+<div class="container">
+  
+  <div class="left">
+    <h3>Left Side</h3>
+
+    <button (click)="getProduct()">Load Products</button>
+
+    <ul>
+      <li *ngFor="let item of productData">
+        {{ item.name }} - {{ item.brand }} - ₹{{ item.price }}
+      </li>
+    </ul>
+  </div>
+
+  <div class="right">
+    <h3>Right Side</h3>
+    <p>Other content here...</p>
+  </div>
+
+</div>

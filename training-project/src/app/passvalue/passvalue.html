@@ -1,0 +1,36 @@
+<h1>Pass Value Works!</h1>
+
+<!-- Dynamic Query Params -->
+<a 
+  [routerLink]="['/profile']"
+  [queryParams]="{
+    id: userData().id,
+    name: userData().name,
+    age: userData().age
+  }">
+  Go To Profile
+</a>
+
+<br><br>
+
+<!-- Static Query Params -->
+<a 
+  [routerLink]="['/profile']"
+  [queryParams]="{ id: 2, name: 'vimal', age: 23 }">
+  Go To Profile
+</a>
+
+<br><br>
+
+<!-- Button Navigation -->
+<button (click)="goToProfile()">Go To Profile</button>
+
+<hr>
+
+<!-- Route Params -->
+<a [routerLink]="['/product', 'vimal']">Go To Product</a>
+
+<br><br>
+
+<!-- Dynamic Route Param -->
+<a [routerLink]="['/product', userData().name]">Go To Product</a>

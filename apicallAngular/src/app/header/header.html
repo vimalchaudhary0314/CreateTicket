@@ -1,0 +1,29 @@
+
+<div class="navbar">
+
+  <ul>
+
+    <li>
+      <a
+        routerLink=""
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
+        Counter
+      </a>
+    </li>
+
+    <li>
+      <a
+        routerLink="/BookDetails"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
+        BookDetails
+        <span>
+          {{ count$ | async }}
+        </span>
+      </a>
+    </li>
+
+  </ul>
+
+</div>

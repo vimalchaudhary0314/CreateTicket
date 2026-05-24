@@ -1,0 +1,33 @@
+<div>
+  <ul>
+    <li>
+      <a routerLink="/home" routerLinkActive="active">Home</a>
+    </li>
+
+    <li>
+      <a routerLink="/pipes" routerLinkActive="active">Pipes</a>
+    </li>
+
+    <li>
+      <a routerLink="/product" routerLinkActive="active">Product</a>
+    </li>
+
+
+    <li>
+      <a routerLink="/user" routerLinkActive="active">User</a>
+    </li>
+
+    <li>
+      <a routerLink="/userDetails" routerLinkActive="active">UserDetails</a>
+    </li>
+
+    <li>
+      <a 
+        routerLink="/" 
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }">
+        Profile
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,36 @@
+/* Remove default list styling */
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #222;
+}
+
+/* Each list item */
+li {
+  margin: 0 10px;
+}
+
+/* Links */
+a {
+  display: block;
+  padding: 12px 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+/* Active route (Angular adds this class) */
+.active {
+  background-color: #ff5722;
+  border-radius: 5px;
+}
